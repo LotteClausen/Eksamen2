@@ -1,0 +1,1320 @@
+@charset "UTF-8";
+/* CSS Document */
+   
+        
+    
+
+/*--------------------------------------------------------------
+# Fonter
+--------------------------------------------------------------*/
+
+h1{
+	font-family: 'badoni 72 oldstyle', serif;
+}
+
+p {
+	font-family: 'badoni 72 oldstyle', serif;
+}
+.posted-date {
+	font-family: 'badoni 72 oldstyle', serif;
+}
+
+a {
+	font-family: 'badoni 72 oldstyle', serif;
+}
+
+
+
+/*--------------------------------------------------------------
+# Alle h1 - til undersiderne 
+--------------------------------------------------------------*/
+
+.entry-title-alle{
+	text-align: center;
+	margin-top: 80px;
+    font-size: 30px;
+	margin-right: -2%; /* få teksten ind på midten */ 
+    color: #2f2f2f; 
+	letter-spacing: 0.10rem;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Top
+--------------------------------------------------------------*/
+.flex {
+    display: flex !important;
+}
+
+@media screen and (min-width: 992px) {
+    .flex-lg {
+        display: flex !important;
+    }
+}
+
+/*-------------------------------
+/*
+# Site Branding
+--------------------------------*/
+.logo {
+    padding: 40px 0;
+	margin-left: 3.5%;
+}
+
+
+
+
+    
+@media screen and (min-width: 768px){
+    .logo{
+       margin-right: 2%; 
+        
+    }
+    
+    .logo img {
+        
+        width: 100%;
+    }
+
+
+    
+}
+
+/*-------------------------------
+  Hamburger Menu
+----------------------------------------*/
+.hamburger-menu {
+    position: relative;
+    width: 100%;
+    max-width: 24px;
+    height: 22px;
+    margin: 0 auto;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #181818;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 2px;
+}
+
+.hamburger-menu span:nth-child(2),
+.hamburger-menu span:nth-child(3) {
+    top: 10px;
+}
+
+.hamburger-menu span:nth-child(4) {
+    top: 18px;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.hamburger-menu.open span:nth-child(4) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+
+/*-------------------------------
+# Main menu = hovede menuen 
+--------------------------------*/
+.site-navigation {
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 22px;
+    overflow: hidden;
+    background: #fff;
+    list-style: none;
+    transition: all .35s;
+}
+
+.site-navigation.show {
+    height: auto;
+}
+
+.site-navigation ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* designet på bogstaverne */
+.site-navigation ul li {
+    display: block;
+    padding: 10px 0;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.site-navigation ul li a {
+    display: block;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    color: #2f2f2f;
+    transition: all 0.35s;
+    text-decoration: none;
+}
+
+/* stregerne i burgermenuen */
+.site-navigation ul li a:hover,
+.site-navigation ul li.current-menu-item a {
+    border-color: #2f2f2f;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .site-header {
+        margin-top: 12px;
+        margin-bottom: 40px;
+        
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .site-navigation ul li {
+        padding: 0 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Starten = forside billede 
+--------------------------------------------------------------*/
+.hero-background {
+    margin-top: 66px;
+}
+
+.hero-background img {
+    width: 85%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px){
+    .swiper-button-next,
+    .swiper-button-prev {
+        visibility: visible;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Container,  selve indhold - tekst + Billederne = Home page
+--------------------------------------------------------------*/
+.single-page {
+    padding-top: 10px;
+    padding-bottom: 100px;
+	
+}
+
+/* teksten til under billederne - ændring på højten ( man kan også her ændre på skriften farve =    ) */
+.single-page .content-wrap {
+    margin-top: 100px;
+    text-align: center;
+	
+   
+}
+
+/* ændringer af datoerne over tekst og billede - forside */
+.single-page .content-wrap .posted-date {
+    font-size: 16px; /* ænding på størrelsen af datoerne over skrift og billede*/
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+	margin-left: 37%; /* få datoerne ind på midten */ 
+	
+}
+
+/* ændringer af teksten under datoerne - forside */
+.single-page .content-wrap .entry-title {
+    margin-top: 15px;
+    font-size: 26px;
+	margin-left: 37%; /* få teksten ind på midten */ 
+    color: #2f2f2f; 
+	
+		
+}
+
+.single-page .content-wrap .tags-links {
+    margin-top: 30px;
+	margin-left: 38%; /* få hashtaggene ind på midten */ 
+}
+
+/* ændringer af hashtaggene  - forside */
+.single-page .content-wrap .tags-links a {
+    margin-right: 14px; /* hvor tætte de skal stå fra hiandne */ 
+    font-size: 17px;
+	color: #C89B87;
+  
+}
+
+/* hvor langt Billedet og hashtaggene skal stå fra hiandnen */
+.single-page .content-wrap .featured-image {
+    margin-top: 43px;
+	
+}
+
+/* ændre på størrelsen af billederne på forsiden */ 
+.single-page .content-wrap .featured-image img {
+    max-width: 70%;
+	margin-left: 33%; /* få billederne ind på midten */ 
+}
+
+/* skabe luft mellem billede og teksten under */
+.single-page .content-wrap .entry-content {
+    margin-top: 30px;
+	
+}
+
+/* teksten under billederne - forsiden */
+.single-page .content-wrap .entry-content p {
+    font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 36%;
+}
+
+
+.single-page .content-wrap .entry-footer {
+    margin-top: 100px;
+}
+
+
+/* Read more   =    Læs mere boksen */
+.content-wrap a.read-more {
+    display: block;
+    width: 140px;
+    padding: 15px 0;
+	margin-left: 60%; /* få boksen ind på midten */ 
+    margin-top: 30px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    background: #C89B87;
+}
+
+
+    
+    
+
+   
+/*--------------------------------------------------------------
+# Page Header
+--------------------------------------------------------------*/
+.page-header {
+    position: relative;
+    height: 385px;
+    margin-top: 40px;
+    background-size: cover;
+}
+
+.page-header h1 {
+    font-size: 72px;
+    color: red;
+}
+
+/*--------------------------------------------------------------
+# OM OS - Side 
+--------------------------------------------------------------*/
+
+.about-page {
+	text-align: center;
+}
+
+
+/* hvor langt Billederne skal være fra teksten over billederne - Om os */
+.om-image{
+    margin-top: 50px;
+	margin-left: 25px;
+}
+
+/* størrelserne på Billederne - Om os */
+.om-image img {
+    max-width: 46%;
+}
+
+/* skabe luft mellem billede og teksten under  -  OM OS*/ 
+.tekst-om-os{
+	margin-top: 50px;
+}
+/* teksten under billederne - Om os */ 
+.tekst-om-os {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+    
+    
+}
+
+
+/*--------------------------------------------------------------
+# Bolig Side     													B O L I G
+--------------------------------------------------------------*/
+
+
+
+
+/* titel - top */
+.entry-title-bolig {
+	text-align: center;
+    font-size: 30px;
+    color: #2f2f2f;
+    
+       
+	
+}
+
+/* teksten */
+.entry-tekst-bolig {
+	font-size: 20px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	
+}
+
+
+
+/*selve ydre bosksen for hele "rammen" */
+.bolig-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 3%;
+	padding-top: 1px;
+	margin-right: 1%;
+	
+}
+
+/* ændre på størrelsen af billederne + hvor mange billeder som skal være på en række */
+.container-bolig-img {
+	width: 50%;
+		
+}
+/* hvor store billederne skal være */
+.bolig-img img {
+	width: 100%;
+	
+}
+
+
+.bolig-img {
+    margin: 20px;
+					
+}
+
+
+/*--------------------------------------------------------------
+# Royal Copenhagen æg - side 
+--------------------------------------------------------------*/
+
+.tekst-royal-copenhagen-aeg-first {
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.royal-copenhagen-aeg-img {
+    margin-top: 50px;
+	margin-left: 18%;
+	margin-bottom: 70px;
+}
+
+
+.royal-copenhagen-aeg-img img {
+    max-width: 40%;
+	
+}
+
+
+.royal-copenhagen-aeg-opskrift {
+	margin-top: 50px;
+}
+
+
+.royal-copenhagen-aeg-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: left;
+	margin-left: 18%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+
+.royal-copenhagen-aeg-img2 img {
+	max-width: 30%;
+	margin-left: 50px;;
+}
+
+.royal-copenhagen-aeg-img2 {
+	margin-top: 50px;
+	margin-left: 14%;
+    
+}
+
+
+
+	
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+/*--------------------------------------------------------------
+# Køkken indretning  - side 
+--------------------------------------------------------------*/
+		
+
+.koekken-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.koekken-img img {
+    max-width: 40%;
+	
+}
+
+
+.tekst-koekken{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-koekken {
+	margin-top: 50px;
+}
+
+
+	
+.koekken-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 120px;
+	margin-top: 100px;
+	
+}
+
+.koekken-img-down {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 150px;
+	
+}
+
+
+.koekken-img-down img {
+    max-width: 40%;
+	
+	
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+/*--------------------------------------------------------------
+# Serverings ideer  - side 
+--------------------------------------------------------------*/
+
+.tekst-servering{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-servering {
+	margin-top: 50px;
+}
+
+
+
+.servering-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.servering-img img {
+    max-width: 40%;
+	
+}
+
+	
+.servering-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 120px;
+	margin-top: 100px;
+	
+}
+
+.servering-img-down {
+    margin-top: 50px;
+	
+	margin-bottom: 150px;
+	
+}
+
+
+.servering-img-down img {
+    max-width: 40%;
+	margin-left: 31%;
+	
+	
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+/*--------------------------------------------------------------
+# Nytår  - side 
+--------------------------------------------------------------*/
+
+
+.tekst-nytar{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-nytar {
+	margin-top: 50px;
+}
+
+
+
+.nytar-img {
+    margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+
+.nytar-img img {
+    max-width: 40%;
+	margin-left: 31%;
+	
+}
+
+	
+.nytar-ide {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 120px;
+	margin-top: 100px;
+	
+}
+
+.nytar-ide {
+    margin-top: 50px;
+	margin-bottom: 150px;
+	
+}
+
+	
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+/*--------------------------------------------------------------
+# Bord dækning  - side 
+--------------------------------------------------------------*/
+.tekst-bord-daekning{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-bord-daekning {
+	margin-top: 50px;
+}
+
+
+
+.bord-daekning-img {
+    margin-top: 50px;
+	margin-left: 18%;
+	margin-bottom: 170px;
+}
+
+
+.bord-daekning-img img {
+    max-width: 40%;
+	
+
+}
+
+
+
+/*----  # Servietter  -----*/
+
+.servietter-tekst {
+	font-size: 19px;
+	margin-top: 8%;
+	text-align: center;
+}
+
+
+.servietter-img img {
+	width: 30%;
+	margin-top: 0.4%;
+}
+
+.servietter-img {
+	margin-left: 9%;
+	margin-bottom: 10%;
+	
+	
+}
+
+.servietter-img-down img {
+	max-width: 40%;
+}
+
+.servietter-img-down {
+	margin-left: 16%;
+	margin-bottom: 100px;
+	
+}
+
+
+
+/*--------------------------------------------------------------
+# Fødselsdag  - side 
+--------------------------------------------------------------*/
+
+.tekst-fodselsdag{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-fodselsdag {
+	margin-top: 50px;
+}
+
+
+
+.fodselsdag-img {
+    margin-top: 50px;
+	margin-bottom: 100px;
+	margin-left: 18%;
+}
+
+
+.fodselsdag-img img {
+    max-width: 45%;
+	
+	
+}
+
+	
+.fodselsdag-ide {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 120px;
+	margin-top: 100px;
+	
+}
+
+.fodselsdag-ide {
+    margin-top: 50px;
+	margin-bottom: 150px;
+	
+}
+
+	
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Bagning Side                                                    	  B A G N I N G 
+--------------------------------------------------------------*/
+
+/* titel - top */
+.entry-title-bagning {
+	text-align: center;
+	margin-top: 8%;
+    font-size: 30px;
+	olor: #2f2f2f;
+}
+
+/* teksten */
+.entry-tekst-bagning {
+	font-size: 20px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	
+}
+
+/*selve ydre bosksen for hele "rammen" */
+.bagning-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 3%;
+	padding-top: 1px;
+	margin-right: 1%;
+	
+}
+
+/* ændre på størrelsen af billederne + hvor mange billeder som skal være på en række */
+.container-bagning-img {
+	width: 50%;
+		
+}
+/* hvor store billederne skal være */
+.bagning-img img {
+	width: 100%;
+	
+}
+
+
+.bagning-img {
+    margin: 20px;
+	
+					
+}
+
+/*--------------------------------------------------------------
+# Cheesecake  - side 
+--------------------------------------------------------------*/
+		
+
+.cheececake-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.cheececake-img img {
+    max-width: 40%;
+	
+}
+
+
+.tekst-cheesecake-first{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-cheesecake-first {
+	margin-top: 50px;
+}
+
+
+	
+.cheesecake-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: left;
+	margin-left: 16%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+.cheececake-video {
+	margin-left: 18%;
+	margin-bottom: 10%;
+	
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Pesto hummus brød  -  side
+--------------------------------------------------------------*/
+		
+
+.pesto-hummus-brod-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.pesto-hummus-brod-img img {
+    max-width: 40%;
+	
+}
+
+
+.tekst-pesto-hummus-brod{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-pesto-hummus-brod{
+	margin-top: 50px;
+}
+
+
+	
+.pesto-hummus-brod-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: left;
+	margin-left: 16%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+.pesto-hummus-brod-video {
+	margin-left: 18%;
+	margin-bottom: 10%;
+	
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Ciagrød   -  side
+--------------------------------------------------------------*/
+		
+
+.chiagrod-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.chiagrod-img img {
+    max-width: 40%;
+	
+}
+
+
+.tekst-chiagrod{
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-chiagrod{
+	margin-top: 50px;
+}
+
+
+	
+.chiagrod-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: left;
+	margin-left: 16%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+
+.chiagrod-img2 {
+        margin-left: 33%;
+    }
+
+    
+.chiagrod-img2 img{
+        max-width: 47%;
+    }
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Brombærmousse med chokoladebund    -   side
+--------------------------------------------------------------*/
+
+.bromaer-mousse-img {
+    margin-top: 50px;
+	margin-left: 16%;
+	margin-bottom: 60px;
+}
+
+
+.bromaer-mousse-img img {
+    max-width: 40%;
+	
+}
+
+
+.tekst-bromaer-mousse{
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 30px;
+	font-size: 17px;
+    line-height: 2rem;
+}
+
+.tekst-bromaer-mousse{
+	margin-top: 50px;
+}
+
+
+	
+.bromaer-mousse-opskrift {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: left;
+	margin-left: 16%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	
+}
+
+
+
+.bromaer-mousse_tekst {
+	font-size: 20px;
+	margin-top: 8%;
+}
+
+
+.bromaer-mousse-proces-overskrift {
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 50px;
+	font-size: 20px;
+    line-height: 2rem;
+	margin-bottom: 50px;
+}
+
+
+
+.bromaer-mousse-img-proces img {
+	width: 30%;
+	margin-top: 0.4%;
+}
+
+.bromaer-mousse-img-proces {
+	margin-left: 9%;
+	margin-bottom: 10%;
+	
+	
+}
+
+
+
+@media screen and (min-width: 992px){
+    .awards-content {
+        margin-bottom: 0;
+    }
+
+   
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Kontakt - Side 
+--------------------------------------------------------------*/
+
+.Kontakt-page {
+	text-align: center;
+}
+	
+	/* hvor langt Billederne, skal være fra teksten over billederne */
+.kontakt-image{
+    margin-top: 50px;
+}
+
+/* størrelserne på Billederne  */
+.kontakt-image img {
+    max-width: 35%;
+}
+
+
+
+/* teksten */
+.kontakt-tekst {
+	font-size: 17px;
+    line-height: 2rem;
+    text-align: center;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 100px;
+	margin-top: 50px;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Footer Instagram
+--------------------------------------------------------------*/
+.entry-title-footer {
+	margin-left: 41%;
+	letter-spacing: 0.10rem;
+	margin-top: 90px;
+	margin-bottom: -70px;
+		
+}
+
+
+.footer-instagram {
+    margin-top: 60%;
+}
+
+.footer-instagram figure {
+    width: 20;
+    margin: 0;
+	
+}
+
+.footer-instagram figure img {
+    display: block;
+    max-width: 70%;
+	
+}
+
+@media screen and (min-width: 576px){
+    .footer-instagram figure {
+        
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+    .footer-instagram figure {
+        width: 10%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .footer-instagram figure {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .footer-instagram {
+        margin-top: 100px;
+    }
+
+    .footer-instagram figure img {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Footer Bar
+--------------------------------------------------------------*/
+.footer-bar {
+    padding: 22px 0;
+    background-color: #C89B87;
+	
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .footer-copyright p {
+        text-align: left;
+    }
+
+    .footer-social {
+        margin-top: 0;
+    }
+
+    .footer-social li {
+        margin: 0 0 0 30px;
+    }
+    
+    
+    
+}
+
+    
+    
+    
+}
